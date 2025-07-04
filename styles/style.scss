@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.top {
+  background-color: rgb(225, 255, 143);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  overflow: auto;
+
+
+  &__content {
+    margin-top: 196px;
+    width: 768px;
+
+    &-star {
+      &-1 {
+        position: absolute;
+        left: 156px;
+        top: 69px;
+      }
+
+      &-2 {
+        position: absolute;
+        left: 63px;
+        top: 94px;
+      }
+
+      &-3 {
+        position: absolute;
+        right: 455px;
+        bottom: 225px;
+      }
+
+      &-4 {
+        position: absolute;
+        right: 344px;
+        bottom: 149px;
+      }
+
+      &-5 {
+        position: absolute;
+        right: -488px;
+        top: -333.46px;
+      }
+    }
+
+
+
+    &-title {
+      color: rgb(32, 32, 39);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 78px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+
+    &-quote {
+      width: 720px;
+      margin-top: 24px;
+      color: rgb(32, 32, 39);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: left;
+
+      &-bold {
+        font-weight: 600;
+      }
+    }
+
+    &-button {
+      margin-top: 64px;
+      width: 247px;
+      box-sizing: border-box;
+      border: 1px solid rgb(32, 32, 39);
+      border-radius: 60px;
+      background: rgb(32, 32, 39);
+      padding-left: 28px;
+      padding-top: 16px;
+      padding-right: 28px;
+      padding-bottom: 16px;
+
+
+      color: rgb(255, 255, 255);
+      font-family: inherit;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 141.69%;
+      letter-spacing: 0%;
+      text-align: center;
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    &-button:hover {
+      background-color: white;
+      color: black;
+      cursor: url('../img//cursor.svg'), pointer;
+    }
+  }
+
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.about-games {
+  background-color: rgb(32, 32, 39);
+  height: 1470px;
+  overflow: auto;
+
+
+
+  &-star {
+
+    &-container {
+      z-index: -2;
+    }
+
+    &-1 {
+      position: absolute;
+      left: 25px;
+      top: 1570px;
+    }
+
+    &-2 {
+      position: absolute;
+      left: 40px;
+      top: 1622px;
+    }
+
+    &-3 {
+      position: absolute;
+      right: -110px;
+      top: 946px;
+    }
+  }
+
+
+  &__content {
+    &-title {
+      margin-top: 94px;
+      color: rgb(255, 255, 255);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 78px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+
+    &-quote {
+      margin-top: 24px;
+      width: 788px;
+      color: rgb(255, 255, 255);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+
+
+
+  }
+
+  &__cards-container {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+
+    &-top {
+      display: flex;
+      flex-direction: row;
+      column-gap: 32px;
+      align-items: flex-start;
+    }
+
+    &-bottom {
+      margin-top: -7px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 32px;
+      align-items: flex-end;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    &-item {
+      width: 378px;
+      border-radius: 30px;
+      background-color: white;
+      transition: transform 0.3s ease;
+
+      &-img {
+        width: 378px;
+        height: 314px;
+      }
+
+      &-content-container {
+        padding: 32px 32px 36px 32px;
+      }
+
+      &-button {
+        height: 36px;
+        box-sizing: border-box;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        padding: 8px 16px 10px 16px;
+        border: none;
+
+
+        color: rgb(32, 32, 39);
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0px;
+        align-items: center;
+      }
+
+
+      &-title {
+        margin-top: 16px;
+        color: rgb(32, 32, 39);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+
+      }
+    }
+
+    &-item:hover {
+      transform: scale(1.05);
+      z-index: 3;
+    }
+  }
+
+}
