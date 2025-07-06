@@ -66,10 +66,10 @@ body {
 .top__content-quote-bold {
   font-weight: 600;
 }
-.top__content-button {
+.top__content-button-container {
+  box-sizing: border-box;
   margin-top: 64px;
   width: 247px;
-  box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
   background: rgb(32, 32, 39);
@@ -77,19 +77,26 @@ body {
   padding-top: 16px;
   padding-right: 28px;
   padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top__content-button {
   color: rgb(255, 255, 255);
-  font-family: inherit;
   font-size: 24px;
   font-weight: 600;
   line-height: 141.69%;
   letter-spacing: 0%;
   text-align: center;
+  text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.top__content-button:hover {
+.top__content-button-container:hover {
   background-color: white;
-  color: black;
   cursor: url("../img//cursor.svg"), pointer;
+}
+.top__content-button-container:hover .top__content-button {
+  color: black;
 }
 
 .center {
