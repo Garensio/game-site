@@ -21,6 +21,10 @@ body {
     margin-top: 196px;
     width: 768px;
 
+    &-mobile{
+      display: none;
+    }
+
     &-star {
       &-1 {
         position: absolute;
@@ -81,7 +85,7 @@ body {
 
     &-button-container {
       box-sizing: border-box;
-      margin-top: 64px;
+      margin-top: 48px;
       width: 247px;
       border: 1px solid rgb(32, 32, 39);
       border-radius: 60px;
@@ -259,3 +263,6 @@ body {
   }
 
 }
+
+
+@import 'mobile'

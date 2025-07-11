@@ -20,6 +20,9 @@ body {
   margin-top: 196px;
   width: 768px;
 }
+.top__content-mobile {
+  display: none;
+}
 .top__content-star-1 {
   position: absolute;
   left: 156px;
@@ -68,7 +71,7 @@ body {
 }
 .top__content-button-container {
   box-sizing: border-box;
-  margin-top: 64px;
+  margin-top: 48px;
   width: 247px;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
@@ -212,4 +215,104 @@ body {
 .about-games__cards-container-item:hover {
   transform: scale(1.05);
   z-index: 3;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .top__content {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 147px;
+  }
+  .top__content-mobile {
+    display: block;
+  }
+  .top__content-mobile-star-1 {
+    position: absolute;
+    left: 37px;
+    top: 97px;
+  }
+  .top__content-mobile-star-2 {
+    position: absolute;
+    left: 91px;
+    top: 64px;
+  }
+  .top__content-mobile-star-3 {
+    position: absolute;
+    right: 86px;
+    bottom: 125px;
+  }
+  .top__content-mobile-star-4 {
+    position: absolute;
+    right: 34px;
+    bottom: 79px;
+  }
+  .top__content-mobile-star-5 {
+    position: absolute;
+    right: -86px;
+    top: -86px;
+  }
+  .top__content-button-container {
+    margin-top: 36px;
+  }
+  .top__content-star-1 {
+    display: none;
+  }
+  .top__content-star-2 {
+    display: none;
+  }
+  .top__content-star-3 {
+    display: none;
+  }
+  .top__content-star-4 {
+    display: none;
+  }
+  .top__content-star-5 {
+    display: none;
+  }
+  .top__content-title {
+    width: 262px;
+    color: rgb(32, 32, 39);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .top__content-quote {
+    width: 296px;
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .top__content-button-container {
+    width: 285px;
+  }
+  .top__content-button {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .about-games {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
