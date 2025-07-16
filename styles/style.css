@@ -217,6 +217,132 @@ body {
   z-index: 3;
 }
 
+.mini-games {
+  background-color: rgb(32, 32, 39);
+  height: 3500px;
+  overflow: auto;
+  position: relative;
+}
+.mini-games-star-1 {
+  position: absolute;
+  right: 124px;
+  top: 93px;
+}
+.mini-games-star-2 {
+  position: absolute;
+  right: 45px;
+  top: 126px;
+}
+.mini-games-star-3 {
+  position: absolute;
+  right: 150px;
+  bottom: 45px;
+}
+.mini-games-star-4 {
+  position: absolute;
+  right: 52px;
+  bottom: 65px;
+}
+.mini-games__content-title {
+  margin-top: 46 px;
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.mini-games__cards-container {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.mini-games__cards-container-item {
+  height: 500px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+}
+.mini-games__cards-container-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.mini-games__cards-container-item-content {
+  padding: 48px;
+  width: 600px;
+  box-sizing: border-box;
+}
+.mini-games__cards-container-item-content-title {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.mini-games__cards-container-item-content-description {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.mini-games__cards-container-item-content-button-container {
+  box-sizing: border-box;
+  margin-top: 36px;
+  width: 247px;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding-left: 28px;
+  padding-top: 16px;
+  padding-right: 28px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mini-games__cards-container-item-content-button {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.mini-games__cards-container-item-content-button-container:hover {
+  background-color: white;
+}
+.mini-games__cards-container-item-content-button-container:hover .mini-games__cards-container-item-content-button {
+  color: black;
+}
+
+.footer {
+  background: rgb(189, 237, 53);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer__span {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
