@@ -317,6 +317,7 @@ body {
   letter-spacing: 0%;
   text-align: center;
   text-decoration: none;
+  cursor: default;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .mini-games__cards-container-item-content-button-container:hover {

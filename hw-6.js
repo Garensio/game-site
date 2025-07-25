@@ -38,7 +38,7 @@ console.log(array3);
 //Задание 6
 let array4 = [9, 8, 7, 'a', 6, 5];
 array4 = array4.sort();
-array4 = array4.filter(el => el !=='a');
+array4 = array4.filter(el => typeof el === "number");
 console.log(array4);
 
 //Задание 7
@@ -47,12 +47,10 @@ let check = 0;
 
 let userNum = prompt(`Угадайте число!`);
 
-array5.forEach(el => {
-    if(el === Number(userNum)){
+    if(array5.includes(Number(userNum))){
         alert('Угадал');
         check++
     } 
-});
 
 if(check === 0){
     alert('Не угадал');
@@ -60,9 +58,7 @@ if(check === 0){
 
 //Задание 8
 let word = 'abcdef';
-let array6 = word.split('');
-array6 = array6.reverse();
-let wordReverse = array6.join('');
+let wordReverse = word.split('').reverse().join('');
 
 console.log(wordReverse);
 
@@ -79,39 +75,39 @@ for(let i = 0; i <= (array8.length - 2); i++){
 }
 
 //Задание 11
-let squaringArray = (...array) => {
+let squaringArray = (array) => {
    let newArray = array.map(el => (el * el));
    return newArray;
 }
 
-console.log(squaringArray(1, 2, 3, 4));
+console.log(squaringArray([1, 2, 3, 4]));
 
 
 //Задание 12
-let lengthString = (...array) => {
+let lengthString = (array) => {
     let newArray = array.map(el => el.length);
     return newArray;
 }
 
-console.log(lengthString('Array', 'Hallo', 'Привет'));
+console.log(lengthString(['Array', 'Hallo', 'Привет']));
 
 //Задание 13
-let negativeNumbers = (...array) => {
+let negativeNumbers = (array) => {
     let newArray = array.filter(el => el < 0);
     return(newArray);
 }
 
-console.log(negativeNumbers(2, 5, 6, -11, 12, -15));
+console.log(negativeNumbers([2, 5, 6, -11, 12, -15]));
 
 //Задание 14
 let numbers = [];
 
 for (let i = 0; i < 10; i++) {
-  let randomNumber = Math.floor(Math.random() * 10); // Случайное число от 1 до 10
+  let randomNumber = Math.floor(Math.random() * 10) + 1; // Случайное число от 1 до 10
   numbers.push(randomNumber);
 }
 
-let newArray = numbers.filter(el => el % 2 == 0);
+let newArray = numbers.filter(el => el % 2 === 0);
 
 console.log(`Исходный массив: ${numbers}`);
 console.log(`Массив с четными значениями: ${newArray}`);
@@ -120,7 +116,7 @@ console.log(`Массив с четными значениями: ${newArray}`);
 let array9 = [];
 
 for (let i = 0; i < 6; i++) {
-  let randomNumber = Math.floor(Math.random() * 10); // Случайное число от 1 до 10
+  let randomNumber = Math.floor(Math.random() * 10) + 1; // Случайное число от 1 до 10
   array9.push(randomNumber);
 }
 
