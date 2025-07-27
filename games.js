@@ -1,3 +1,5 @@
+
+
 document.getElementById('game-1').addEventListener('click',
     function () {
         let randomNumber = Math.floor(Math.random() * 100) + 1; // Случайное число от 1 до 100
@@ -81,3 +83,71 @@ document.getElementById('game-2').addEventListener('click',
 
     }
 )
+
+
+document.getElementById('game-3').addEventListener('click',
+    function () {
+        let userSting, resultString;
+        while (true) {
+            userSting = prompt("Введите текст, который будет перевёрнут.");
+
+            // Если пользователь нажал "Отмена", выходим из цикла
+            if (userSting === null) {
+                alert('Игра окончена.');
+                break;
+            }
+
+            resultString = userSting.split("").reverse().join("");
+            alert(`Перевернутый текст: ${resultString}`);
+
+        }
+    }
+)
+
+
+const quiz = [
+    {
+        question: "Какого цвета небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2 // номер правильного ответа
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+
+document.getElementById('game-5').addEventListener('click',
+    function () {
+        let userAnswer, count=0 ;
+        for (let i = 0; i < quiz.length; i++) {
+             userAnswer = prompt(` ${quiz[i].question}\n Варианты ответов: ${quiz[i].options.join("; ")}`);
+
+            // Если пользователь нажал "Отмена", выходим из цикла
+            if (userAnswer === null) {
+                alert('Игра окончена.');
+                break;
+            }
+
+            userAnswer = Number(userAnswer);
+
+            if(userAnswer === quiz[i].correctAnswer){
+                count++;
+            }
+
+        }
+
+        alert(`Количество правильных ответов: ${count}`);
+    }
+)
+
+
+
+
+
