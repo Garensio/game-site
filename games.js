@@ -105,6 +105,79 @@ document.getElementById('game-3').addEventListener('click',
 )
 
 
+document.getElementById('game-4').addEventListener('click',
+    function () {
+        let userString, resultString;
+        let arrayOfVariants = ["камень", "ножницы", "бумага"];
+        resultString = arrayOfVariants[Math.floor(Math.random() * 3)];
+        console.log(resultString);
+
+        while (true) {
+            userString = prompt(`Сыграем с компьютером в камень, ножницы, бумага! Для этого введите "камень", "ножницы" или "бумага". `);
+
+            // Если пользователь нажал "Отмена", выходим из цикла
+            if (userString === null) {
+                alert('Игра окончена.');
+                break;
+            }
+
+            if(userString.toLowerCase() === "камень"){
+                switch(resultString){
+                    case "камень":
+                        alert("Компьютер также выбрал камень! У вас ничья!")
+                        break;
+                    case "ножницы":
+                        alert("Компьютер выбрал ножницы, Вы победили!");
+                        break;
+                    case "бумага":
+                        alert("Компьютер выбрал бумагу, Вы проиграли!");
+                        break;
+                    default:
+                        alert("Вы ввели неверное значение, пробуйте ещё раз!")
+                        break;
+                }
+                break;
+            }
+            if(userString.toLowerCase() === "ножницы"){
+                switch(resultString){
+                    case "камень":
+                        alert("Компьютер выбрал камень! Вы проиграли!")
+                        break;
+                    case "ножницы":
+                        alert("Компьютер также выбрал ножницы! У вас ничья!");
+                        break;
+                    case "бумага":
+                        alert("Компьютер выбрал бумагу, Вы победили!");
+                        break;
+                    default:
+                        alert("Вы ввели неверное значение, пробуйте ещё раз!")
+                        break;
+                }
+                 break;
+            }
+             if(userString.toLowerCase() === "бумага"){
+                switch(resultString){
+                    case "камень":
+                        alert("Компьютер выбрал камень! Вы победили!")
+                        break;
+                    case "ножницы":
+                        alert("Компьютер выбрал ножницы! Вы проиграли!");
+                        break;
+                    case "бумага":
+                        alert("Компьютер также выбрал бумагу! У вас ничья!");
+                        break;
+                    default:
+                        alert("Вы ввели неверное значение, пробуйте ещё раз!")
+                        break;
+                }
+                 break;
+            }
+
+        }
+    }
+)
+
+
 const quiz = [
     {
         question: "Какого цвета небо?",
