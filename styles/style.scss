@@ -8,6 +8,16 @@ body {
   overflow-x: hidden;
 }
 
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.no-center {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
 .top {
   background-color: rgb(225, 255, 143);
   background-repeat: no-repeat;
@@ -119,13 +129,75 @@ body {
     &-button-container:hover &-button {
       color: black;
     }
+
+
+  }
+
+  &__scroll-container {
+     position: relative;
+    z-index: 1142;
+    margin-top: 150px;
+    width: 100%;
+    overflow-x: auto;
+    /* Горизонтальная прокрутка */
+    white-space: nowrap;
+    /* Запрет переноса элементов */
+    background: rgba(188, 236, 48, 1);
+    /* Опционально: рамка для визуального разделения */
+
+    scrollbar-width: none;
+    /* Для Firefox */
+    -ms-overflow-style: none;
+    /* Для Internet Explorer и Edge */
+
+    &::-webkit-scrollbar {
+      display: none;
+      /* Для Chrome, Safari, Opera */
+    }
+
+    &-content {
+      display: inline-block;
+      white-space: nowrap;
+      align-items: center;
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
+
+    &-word {
+      display: inline-block;
+      font-size: 16px;
+      white-space: nowrap;
+      margin-right: 51px;
+
+      color: rgba(32, 32, 39, 1);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 110%;
+      letter-spacing: 4%;
+      text-align: left;
+      text-transform: uppercase;
+       vertical-align: middle; /* Вертикальное выравнивание по середине */
+    }
+
+    &-star {
+      margin-right: 51px;
+      display: inline-block;
+      white-space: nowrap;
+       vertical-align: middle; /* Вертикальное выравнивание по середине */
+
+      &-item {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+
   }
 
 }
 
-.center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+.left-scroll-container {
+  margin-left: 49px;
 }
 
 .about-games {
@@ -314,7 +386,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    
+
     &-item {
       height: 500px;
       background-color: white;

@@ -121,8 +121,8 @@ document.getElementById('game-4').addEventListener('click',
                 break;
             }
 
-            if(userString.toLowerCase() === "камень"){
-                switch(resultString){
+            if (userString.toLowerCase() === "камень") {
+                switch (resultString) {
                     case "камень":
                         alert("Компьютер также выбрал камень! У вас ничья!")
                         break;
@@ -138,8 +138,8 @@ document.getElementById('game-4').addEventListener('click',
                 }
                 break;
             }
-            if(userString.toLowerCase() === "ножницы"){
-                switch(resultString){
+            if (userString.toLowerCase() === "ножницы") {
+                switch (resultString) {
                     case "камень":
                         alert("Компьютер выбрал камень! Вы проиграли!")
                         break;
@@ -153,10 +153,10 @@ document.getElementById('game-4').addEventListener('click',
                         alert("Вы ввели неверное значение, пробуйте ещё раз!")
                         break;
                 }
-                 break;
+                break;
             }
-             if(userString.toLowerCase() === "бумага"){
-                switch(resultString){
+            if (userString.toLowerCase() === "бумага") {
+                switch (resultString) {
                     case "камень":
                         alert("Компьютер выбрал камень! Вы победили!")
                         break;
@@ -170,7 +170,7 @@ document.getElementById('game-4').addEventListener('click',
                         alert("Вы ввели неверное значение, пробуйте ещё раз!")
                         break;
                 }
-                 break;
+                break;
             }
 
         }
@@ -198,9 +198,9 @@ const quiz = [
 
 document.getElementById('game-5').addEventListener('click',
     function () {
-        let userAnswer, count=0 ;
+        let userAnswer, count = 0;
         for (let i = 0; i < quiz.length; i++) {
-             userAnswer = prompt(` ${quiz[i].question}\n Варианты ответов: ${quiz[i].options.join("; ")}`);
+            userAnswer = prompt(` ${quiz[i].question}\n Варианты ответов: ${quiz[i].options.join("; ")}`);
 
             // Если пользователь нажал "Отмена", выходим из цикла
             if (userAnswer === null) {
@@ -210,7 +210,7 @@ document.getElementById('game-5').addEventListener('click',
 
             userAnswer = Number(userAnswer);
 
-            if(userAnswer === quiz[i].correctAnswer){
+            if (userAnswer === quiz[i].correctAnswer) {
                 count++;
             }
 
@@ -220,6 +220,20 @@ document.getElementById('game-5').addEventListener('click',
     }
 )
 
+
+
+document.getElementById('game-6').addEventListener('click',
+    function () {
+        const parentElement = document.querySelector('.mini-games');
+
+        // Генерируем случайные значения для красного, зелёного и синего каналов
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        parentElement.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+)
 
 
 

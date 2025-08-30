@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,16 @@
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.no-center {
+  padding-left: 0%;
+  padding-right: 0%;
 }
 
 .top {
@@ -101,10 +112,60 @@ body {
 .top__content-button-container:hover .top__content-button {
   color: black;
 }
+.top__scroll-container {
+  position: relative;
+  z-index: 1142;
+  margin-top: 150px;
+  width: 100%;
+  overflow-x: auto;
+  /* Горизонтальная прокрутка */
+  white-space: nowrap;
+  /* Запрет переноса элементов */
+  background: rgb(188, 236, 48);
+  /* Опционально: рамка для визуального разделения */
+  scrollbar-width: none;
+  /* Для Firefox */
+  -ms-overflow-style: none;
+  /* Для Internet Explorer и Edge */
+}
+.top__scroll-container::-webkit-scrollbar {
+  display: none;
+  /* Для Chrome, Safari, Opera */
+}
+.top__scroll-container-content {
+  display: inline-block;
+  white-space: nowrap;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.top__scroll-container-word {
+  display: inline-block;
+  font-size: 16px;
+  white-space: nowrap;
+  margin-right: 51px;
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle; /* Вертикальное выравнивание по середине */
+}
+.top__scroll-container-star {
+  margin-right: 51px;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle; /* Вертикальное выравнивание по середине */
+}
+.top__scroll-container-star-item {
+  width: 36px;
+  height: 36px;
+}
 
-.center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+.left-scroll-container {
+  margin-left: 49px;
 }
 
 .about-games {
@@ -351,7 +412,6 @@ body {
   }
   .top {
     height: 700px;
-    display: flex;
     justify-content: center;
     margin-top: 0;
     position: relative;
@@ -438,6 +498,36 @@ body {
     line-height: 141.69%;
     letter-spacing: 0%;
     text-align: center;
+  }
+  .top__scroll-container {
+    margin-top: 126px;
+  }
+  .top__scroll-container-content {
+    display: inline-block;
+    white-space: nowrap;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .top__scroll-container-word {
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 4%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: 27px;
+  }
+  .top__scroll-container-star {
+    margin-right: 27px;
+  }
+  .top__scroll-container-star-item {
+    width: 19px;
+    height: 19px;
+  }
+  .left-scroll-container {
+    margin-left: 24px;
   }
   .about-games {
     display: none;

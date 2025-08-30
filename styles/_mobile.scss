@@ -9,7 +9,6 @@
 
     .top {
         height: 700px;
-        display: flex;
         justify-content: center;
         margin-top: 0;
         position: relative;
@@ -30,6 +29,7 @@
                     position: absolute;
                     left: 37px;
                     top: 97px;
+
                 }
 
                 &-star-2 {
@@ -121,6 +121,44 @@
                 text-align: center;
             }
         }
+
+
+        &__scroll-container {
+            margin-top: 126px;
+
+            &-content {
+                display: inline-block;
+                white-space: nowrap;
+                align-items: center;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            &-word {
+                color: rgba(32, 32, 39, 1);
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 110%;
+                letter-spacing: 4%;
+                text-align: left;
+                text-transform: uppercase;
+
+                margin-right: 27px;
+            }
+
+            &-star {
+                margin-right: 27px;
+
+                &-item {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+        }
+    }
+
+    .left-scroll-container {
+        margin-left: 24px;
     }
 
 
@@ -258,6 +296,7 @@
 
     .footer {
         height: 100px;
+
         &__span {
             color: rgb(0, 0, 0);
             font-size: 16px;
