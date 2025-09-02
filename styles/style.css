@@ -127,6 +127,7 @@ body {
   /* Для Firefox */
   -ms-overflow-style: none;
   /* Для Internet Explorer и Edge */
+  overflow: hidden;
 }
 .top__scroll-container::-webkit-scrollbar {
   display: none;
@@ -138,6 +139,9 @@ body {
   align-items: center;
   padding-top: 27px;
   padding-bottom: 27px;
+  animation: scroll-left 20s linear;
+  /* Анимация по умолчанию приостановлена */
+  animation-play-state: running;
 }
 .top__scroll-container-word {
   display: inline-block;
@@ -151,19 +155,30 @@ body {
   letter-spacing: 4%;
   text-align: left;
   text-transform: uppercase;
-  vertical-align: middle; /* Вертикальное выравнивание по середине */
+  vertical-align: middle;
+  /* Вертикальное выравнивание по середине */
 }
 .top__scroll-container-star {
   margin-right: 51px;
   display: inline-block;
   white-space: nowrap;
-  vertical-align: middle; /* Вертикальное выравнивание по середине */
+  vertical-align: middle;
+  /* Вертикальное выравнивание по середине */
 }
 .top__scroll-container-star-item {
   width: 36px;
   height: 36px;
 }
 
+/* Анимация для прокрутки */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .left-scroll-container {
   margin-left: 49px;
 }

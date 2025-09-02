@@ -134,7 +134,7 @@ body {
   }
 
   &__scroll-container {
-     position: relative;
+    position: relative;
     z-index: 1142;
     margin-top: 150px;
     width: 100%;
@@ -150,6 +150,8 @@ body {
     -ms-overflow-style: none;
     /* Для Internet Explorer и Edge */
 
+    overflow: hidden;
+
     &::-webkit-scrollbar {
       display: none;
       /* Для Chrome, Safari, Opera */
@@ -161,6 +163,10 @@ body {
       align-items: center;
       padding-top: 27px;
       padding-bottom: 27px;
+      animation: scroll-left 20s linear;
+      /* Анимация по умолчанию приостановлена */
+      animation-play-state: running;
+
     }
 
     &-word {
@@ -176,14 +182,16 @@ body {
       letter-spacing: 4%;
       text-align: left;
       text-transform: uppercase;
-       vertical-align: middle; /* Вертикальное выравнивание по середине */
+      vertical-align: middle;
+      /* Вертикальное выравнивание по середине */
     }
 
     &-star {
       margin-right: 51px;
       display: inline-block;
       white-space: nowrap;
-       vertical-align: middle; /* Вертикальное выравнивание по середине */
+      vertical-align: middle;
+      /* Вертикальное выравнивание по середине */
 
       &-item {
         width: 36px;
@@ -194,6 +202,16 @@ body {
 
   }
 
+}
+
+/* Анимация для прокрутки */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .left-scroll-container {
