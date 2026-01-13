@@ -8,6 +8,16 @@ body {
   overflow-x: hidden;
 }
 
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.no-center {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
 .top {
   background-color: rgb(225, 255, 143);
   background-repeat: no-repeat;
@@ -20,6 +30,10 @@ body {
   &__content {
     margin-top: 196px;
     width: 768px;
+
+    &-mobile {
+      display: none;
+    }
 
     &-star {
       &-1 {
@@ -79,10 +93,10 @@ body {
       }
     }
 
-    &-button {
-      margin-top: 64px;
-      width: 247px;
+    &-button-container {
       box-sizing: border-box;
+      margin-top: 48px;
+      width: 247px;
       border: 1px solid rgb(32, 32, 39);
       border-radius: 60px;
       background: rgb(32, 32, 39);
@@ -90,31 +104,118 @@ body {
       padding-top: 16px;
       padding-right: 28px;
       padding-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-
+    &-button {
       color: rgb(255, 255, 255);
-      font-family: inherit;
       font-size: 24px;
       font-weight: 600;
       line-height: 141.69%;
       letter-spacing: 0%;
       text-align: center;
+      text-decoration: none;
 
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    &-button:hover {
+    &-button-container:hover {
       background-color: white;
-      color: black;
       cursor: url('../img//cursor.svg'), pointer;
     }
+
+    &-button-container:hover &-button {
+      color: black;
+    }
+
+
+  }
+
+  &__scroll-container {
+    position: relative;
+    z-index: 1142;
+    margin-top: 150px;
+    width: 100%;
+    overflow-x: auto;
+    /* Горизонтальная прокрутка */
+    white-space: nowrap;
+    /* Запрет переноса элементов */
+    background: rgba(188, 236, 48, 1);
+    /* Опционально: рамка для визуального разделения */
+
+    scrollbar-width: none;
+    /* Для Firefox */
+    -ms-overflow-style: none;
+    /* Для Internet Explorer и Edge */
+
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+      /* Для Chrome, Safari, Opera */
+    }
+
+    &-content {
+      display: inline-block;
+      white-space: nowrap;
+      align-items: center;
+      padding-top: 27px;
+      padding-bottom: 27px;
+      animation: scroll-left 20s linear;
+      /* Анимация по умолчанию приостановлена */
+      animation-play-state: running;
+
+    }
+
+    &-word {
+      display: inline-block;
+      font-size: 16px;
+      white-space: nowrap;
+      margin-right: 51px;
+
+      color: rgba(32, 32, 39, 1);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 110%;
+      letter-spacing: 4%;
+      text-align: left;
+      text-transform: uppercase;
+      vertical-align: middle;
+      /* Вертикальное выравнивание по середине */
+    }
+
+    &-star {
+      margin-right: 51px;
+      display: inline-block;
+      white-space: nowrap;
+      vertical-align: middle;
+      /* Вертикальное выравнивание по середине */
+
+      &-item {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+
   }
 
 }
 
-.center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+/* Анимация для прокрутки */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.left-scroll-container {
+  margin-left: 49px;
 }
 
 .about-games {
@@ -172,8 +273,6 @@ body {
       text-align: left;
     }
 
-
-
   }
 
   &__cards-container {
@@ -198,7 +297,6 @@ body {
       column-gap: 32px;
       align-items: flex-end;
     }
-
 
     a {
       text-decoration: none;
@@ -227,7 +325,6 @@ body {
         padding: 8px 16px 10px 16px;
         border: none;
 
-
         color: rgb(32, 32, 39);
         font-family: inherit;
         font-size: 16px;
@@ -246,7 +343,6 @@ body {
         line-height: 39px;
         letter-spacing: 0px;
         text-align: left;
-
       }
     }
 
@@ -257,3 +353,160 @@ body {
   }
 
 }
+
+.mini-games {
+  background-color: rgb(32, 32, 39);
+  height: 3500px;
+  overflow: auto;
+  position: relative;
+
+
+  &-star {
+    &-1 {
+      position: absolute;
+      right: 124px;
+      top: 93px;
+    }
+
+    &-2 {
+      position: absolute;
+      right: 45px;
+      top: 126px;
+    }
+
+    &-3 {
+      position: absolute;
+      right: 150px;
+      bottom: 45px;
+    }
+
+    &-4 {
+      position: absolute;
+      right: 52px;
+      bottom: 65px;
+    }
+  }
+
+  &__content {
+    &-title {
+      margin-top: 46 px;
+      color: rgb(255, 255, 255);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 78px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+
+  &__cards-container {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &-item {
+      height: 500px;
+      background-color: white;
+
+      border-radius: 30px;
+      box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0px;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      &-content {
+        padding: 48px;
+        width: 600px;
+        box-sizing: border-box;
+
+        &-title {
+          color: rgb(32, 32, 39);
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 59px;
+          letter-spacing: 0px;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        &-description {
+          color: rgb(32, 32, 39);
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: 0px;
+          text-align: left;
+        }
+
+        &-button-container {
+          box-sizing: border-box;
+          margin-top: 36px;
+          width: 247px;
+          border: 1px solid rgb(32, 32, 39);
+          border-radius: 60px;
+          background: rgb(32, 32, 39);
+          padding-left: 28px;
+          padding-top: 16px;
+          padding-right: 28px;
+          padding-bottom: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-button {
+          color: rgb(255, 255, 255);
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 141.69%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-decoration: none;
+          cursor: default;
+
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        &-button-container:hover {
+          background-color: white;
+        }
+
+        &-button-container:hover &-button {
+          color: black;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.footer {
+  background: rgb(189, 237, 53);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+  &__span {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
+@import 'mobile'
